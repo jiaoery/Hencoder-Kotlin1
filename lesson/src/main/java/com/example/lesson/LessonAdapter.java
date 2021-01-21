@@ -4,6 +4,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.example.core.BaseViewHolder;
 import com.example.lesson.entity.Lesson;
 
 import java.util.ArrayList;

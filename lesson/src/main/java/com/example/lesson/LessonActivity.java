@@ -5,6 +5,7 @@ import android.view.MenuItem;
 import android.widget.LinearLayout;
 import android.widget.Toolbar;
 
+import com.example.core.BaseView;
 import com.example.lesson.entity.Lesson;
 
 import java.util.List;
