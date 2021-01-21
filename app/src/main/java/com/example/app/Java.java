@@ -1,5 +1,7 @@
 package com.example.app;
 
+import com.example.core.utils.Utils;
+
 /**
  * ClassName: Java<br/>
  * Description: TODO Description. <br/>
@@ -15,5 +17,6 @@ class Java {
         int age = 18;
         final String name = "Java";
         Java java =  new Java();
+        Utils.INSTANCE.dp2px(2.0f);
     }
 }

@@ -1,5 +1,7 @@
 package com.example.app
 
+import com.example.core.utils.dp2px
+
 /**
  * ClassName: Kotlin<br/>
  * Description: TODO Description. <br/>
@@ -17,7 +19,7 @@ fun main() {
     val name = "kotlin"
     age = 19
     var java = Java()
-
+    dp2px(2.0f)
 }
 
 fun doubleNumber(x: Int): Int {
