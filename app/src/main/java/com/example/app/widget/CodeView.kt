@@ -10,6 +10,7 @@ import android.view.Gravity
 import androidx.appcompat.widget.AppCompatTextView
 import com.example.app.R
 import com.example.core.utils.Utils
+import com.example.core.utils.Utils.dp2px
 import java.util.*
 
 /**
@@ -21,12 +22,10 @@ import java.util.*
  * @version V1.0.0
  * @since JDK 1.8
  */
-class CodeView : AppCompatTextView {
+ class CodeView @JvmOverloads constructor(context: Context, attributes: AttributeSet?=null): AppCompatTextView(context,attributes) {
+    private val paint = Paint()
 
-    constructor(context: Context) : this(context, null) {
-    }
-
-    constructor(context: Context, attributes: AttributeSet?) : super(context, attributes) {
+    init{
         setTextSize(TypedValue.COMPLEX_UNIT_SP, 18f)
         gravity = Gravity.CENTER
         setBackgroundColor(getContext().getColor(R.color.colorPrimary))
@@ -35,12 +34,10 @@ class CodeView : AppCompatTextView {
         paint.isAntiAlias = true
         paint.style = Paint.Style.STROKE
         paint.color = getContext().getColor(R.color.colorAccent)
-        paint.strokeWidth = Utils.dp2px(6f)
+        paint.strokeWidth = 6f.dp2px()
 
         updateCode()
     }
-
-    private val paint = Paint()
 
     private val codeList = arrayOf(
             "kotlin",

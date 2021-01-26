@@ -18,6 +18,8 @@ class BaseApplication:Application() {
      * 伴生单例对象，会在内部维护一个内部类结构的的单例对象
      */
     companion object{
+        @JvmStatic
+        @get:JvmName("currentApplication")
         private lateinit var currentApplication: Application
 
         @JvmStatic
